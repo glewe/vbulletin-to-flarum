@@ -5,7 +5,7 @@ Based on a phpBB migration script by robrotheram from discuss.flarum.org
 
 Author:     George Lewe
 License:    MIT
-Discussion:
+Discussion: https://discuss.flarum.org/d/25961-vbulletin-to-flarum-migration-script
 
 ## Requirements and Conditions
 The current script only supports vBulletin 3.8.x.
