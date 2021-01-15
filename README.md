@@ -15,14 +15,15 @@ The script assumes that both databases, vBulletin and Flarum, are on the same da
 ### Step 1: Group Migration
 It will create all non-default vBulletin groups in Flarum. The first seven vBulletin groups will be skipped since they can be matched to one of the four default Flarum groups:
 
-| VBULLETIN                              |  FLARUM      |
-| 1 = Unregistered / Not Logged In       |  2 = Guests  |
-| 2 = Registered users                   |  3 = Members |
-| 3 = Users awaiting email confirmation  |  3 = Members |
-| 4 = (COPPA) Users Awaiting Moderation  |  3 = Members |
-| 5 = Super Moderators                   |  4 = Mods    |
-| 6 = Administrators                     |  1 = Admins  |
-| 7 = Moderators                         |  4 = Mods    |
+| VBULLETIN                              | FLARUM      |
+| -------------------------------------- |-------------|
+| 1 = Unregistered / Not Logged In       | 2 = Guests  |
+| 2 = Registered users                   | 3 = Members |
+| 3 = Users awaiting email confirmation  | 3 = Members |
+| 4 = (COPPA) Users Awaiting Moderation  | 3 = Members |
+| 5 = Super Moderators                   | 4 = Mods    |
+| 6 = Administrators                     | 1 = Admins  |
+| 7 = Moderators                         | 4 = Mods    |
 
 ### Step 2: User Migration
 It will create all vBulletin users in Flarum with fields
@@ -31,6 +32,7 @@ It will create all vBulletin users in Flarum with fields
 * is_email_confirmed = 1
 * joined_at
 * last_seen_at
+
 The passwords will NOT be copied. Instead it will create a random passowrd which is a md5 hash of the current time that is then shad1. This means after the migration all users will need to reset their passwords.
 
 It will then create the group_user tabel entries with the appropriate group IDs from step 1.
@@ -103,7 +105,9 @@ If something went wrong and you want to start over:
 4. Make the changes to the script that you desire (e.g. skipping certain sections)
 4. Run the script again
 
-I hope this helps. Enjoy.
+I hope this helps.
+Enjoy.
+
 George
 
 ## Contributions Welcome
