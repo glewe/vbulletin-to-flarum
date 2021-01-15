@@ -4,11 +4,14 @@ Script to migrate a vBulletin board to a Flarum board
 Based on a phpBB migration script by robrotheram from discuss.flarum.org
 
 Author:     George Lewe
+
 License:    MIT
+
 Discussion: https://discuss.flarum.org/d/25961-vbulletin-to-flarum-migration-script
 
 ## Requirements and Conditions
 The current script only supports vBulletin 3.8.x.
+
 The script assumes that both databases, vBulletin and Flarum, are on the same database server.
 
 ## What the script does
